@@ -1,3 +1,5 @@
 # Never upload these to GitHub
 .env
 node_modules/
+subscriptions.json
+reminders.json
