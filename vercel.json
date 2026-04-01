@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/app.js",     "dest": "/app.js" },
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/sw.js",      "dest": "/sw.js" },
+    { "src": "/(.*)",       "dest": "/index.html" }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Chris",
+  "timezone": "America/Toronto",
+  "work_schedule": {
+    "days": ["Thursday", "Friday", "Saturday", "Sunday", "Monday"],
+    "shift_end": "13:30"
+  },
+  "habits": [
+    "Goes to the gym on Tuesday and Wednesday mornings",
+    "Prefers not to run errands before noon on days off",
+    "Works as a massage therapist"
+  ],
+  "preferences": [
+    "Prefers direct communication, no fluff",
+    "Uses Celsius for temperature"
+  ]
+}
