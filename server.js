@@ -93,6 +93,8 @@ Habits: ${context.habits?.join('. ') || ''}
 - "in X hours/minutes" = calculated from current time
 - All times in timezone: ${context.timezone || 'UTC'}
 - Past dates are valid — extract them exactly as stated
+- ALWAYS output datetime in UTC with Z suffix (e.g. 2026-04-01T22:53:00Z)
+- Convert from the user's local timezone to UTC before outputting
 
 == OUTPUT FIELDS ==
 - type: "task" | "journal" | "chat"
