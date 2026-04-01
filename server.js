@@ -229,10 +229,12 @@ app.post('/push/subscribe', (req, res) => {
   }
 
   const subs = readJSON(SUBSCRIPTIONS_FILE);
-  // Avoid duplicates — if this endpoint is already stored, skip
   if (!subs.find(s => s.endpoint === subscription.endpoint)) {
     subs.push(subscription);
     writeJSON(SUBSCRIPTIONS_FILE, subs);
+    console.log(`[push] new subscription saved (total: ${subs.length})`);
+  } else {
+    console.log(`[push] subscription already exists (total: ${subs.length})`);
   }
 
   res.json({ ok: true });
@@ -255,6 +257,7 @@ app.post('/reminders', (req, res) => {
     created_at:   new Date().toISOString()
   });
   writeJSON(REMINDERS_FILE, reminders);
+  console.log(`[reminder] saved: "${title}" at ${reminder_iso}`);
 
   res.json({ ok: true });
 });
