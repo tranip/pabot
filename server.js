@@ -129,11 +129,13 @@ function resolveIntent(extracted) {
 
 // ── Frontend Static Files ──
 // Serve only the specific frontend files — never expose .env, server.js, etc.
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.get('/app.js',     (req, res) => res.sendFile(path.join(__dirname, 'app.js')));
-app.get('/styles.css', (req, res) => res.sendFile(path.join(__dirname, 'styles.css')));
+app.get('/',             (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/app.js',       (req, res) => res.sendFile(path.join(__dirname, 'app.js')));
+app.get('/styles.css',   (req, res) => res.sendFile(path.join(__dirname, 'styles.css')));
+app.get('/manifest.json',(req, res) => res.sendFile(path.join(__dirname, 'manifest.json')));
+app.get('/icon-192.png', (req, res) => res.sendFile(path.join(__dirname, 'icon-192.png')));
+app.get('/icon-512.png', (req, res) => res.sendFile(path.join(__dirname, 'icon-512.png')));
 app.get('/sw.js', (req, res) => {
-  // The Service-Worker-Allowed header lets the SW control the full origin scope
   res.setHeader('Service-Worker-Allowed', '/');
   res.sendFile(path.join(__dirname, 'sw.js'));
 });

@@ -1,9 +1,12 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/app.js",     "dest": "/app.js" },
-    { "src": "/styles.css", "dest": "/styles.css" },
-    { "src": "/sw.js",      "dest": "/sw.js" },
-    { "src": "/(.*)",       "dest": "/index.html" }
+    { "src": "/app.js",        "dest": "/app.js" },
+    { "src": "/styles.css",    "dest": "/styles.css" },
+    { "src": "/sw.js",         "dest": "/sw.js" },
+    { "src": "/manifest.json", "dest": "/manifest.json" },
+    { "src": "/icon-192.png",  "dest": "/icon-192.png" },
+    { "src": "/icon-512.png",  "dest": "/icon-512.png" },
+    { "src": "/(.*)",          "dest": "/index.html" }
   ]
 }
