@@ -11,6 +11,7 @@ const path         = require('path');
 
 const app    = express();
 const PORT   = process.env.PORT || 3000;  // Railway sets PORT automatically
+app.set('trust proxy', 1);               // required for rate limiter behind Railway's proxy
 const client = new Anthropic.default({ apiKey: process.env.CLAUDE_API_KEY });
 
 // ── Push Notification Setup (VAPID) ──
