@@ -202,6 +202,7 @@ app.post('/chat', async (req, res) => {
       reminder_label: extracted.type === 'task'    ? extracted.text : undefined,
     };
 
+    console.log(`[chat] intent=${intent} datetime=${extracted.datetime || 'null'}`);
     res.json(result);
 
   } catch (err) {
