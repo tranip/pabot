@@ -1,7 +1,7 @@
 // Local dev → localhost. Production → Railway URL (filled in after Railway deployment)
 const SERVER = window.location.hostname === 'localhost'
   ? 'http://localhost:3000'
-  : 'https://REPLACE_WITH_RAILWAY_URL';
+  : 'https://pabot-production.up.railway.app';
 
 // ── Storage ──
 // All data lives in localStorage so it persists between sessions without a database
