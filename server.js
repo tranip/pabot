@@ -218,8 +218,10 @@ app.post('/chat', async (req, res) => {
 // Frontend fetches the public VAPID key to set up its push subscription
 app.get('/push/vapid-public-key', (req, res) => {
   if (!process.env.VAPID_PUBLIC_KEY) {
+    console.log('[push] VAPID key not configured');
     return res.status(503).json({ error: 'Push notifications not configured. Run: node generate-vapid.js' });
   }
+  console.log('[push] vapid key requested');
   res.json({ publicKey: process.env.VAPID_PUBLIC_KEY });
 });
 
